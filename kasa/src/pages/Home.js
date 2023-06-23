@@ -1,7 +1,13 @@
+import { Link } from "react-router-dom";
+import HomeBanner from "../components/HomeBanner";
+
+
 export default function Home() {
     return (
-        <div>
-            <h1>Accueil Kasa</h1>
-        </div>
+        <main>
+            <HomeBanner>
+                <h1 className="banner-title">Chez nous, et partout ailleurs</h1>
+            </HomeBanner>
+        </main>
     )
 }

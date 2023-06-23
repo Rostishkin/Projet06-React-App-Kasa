@@ -3,13 +3,15 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    margin-bottom: 50px;
 }
-.active-link{
-    text-decoration: underline;
-}
-
 .navigation-link{
+    font: size 35px;
     font-weight: 500;
     text-decoration: none;
     color:#FF6060;
+    margin-left: 50px;
+}
+.active-link{
+    text-decoration: underline;
 }

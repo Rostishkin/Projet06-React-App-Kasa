@@ -1,13 +1,24 @@
 import { Link } from "react-router-dom";
-import HomeBanner from "../components/HomeBanner";
+import '../style/Home.css';
+import Banner from "../components/Banner";
+import logementsData from '../data/logements.json'
+import Thumb from "../components/Thumb";
+
 
 
 export default function Home() {
     return (
         <main>
-            <HomeBanner>
-                <h1 className="banner-title">Chez nous, et partout ailleurs</h1>
-            </HomeBanner>
+            <Banner>
+                <h1 className="banner-title">Chez vous, et partout ailleurs</h1>
+            </Banner>
+            <div className="gallery">
+                {logementsData.map((logements) => (
+                    <Link to={`/logements/${logements.id}`} key={logements.id}>
+                        <Thumb logements={logements} />
+                    </Link>
+                ))}
+            </div>
         </main>
     )
 }

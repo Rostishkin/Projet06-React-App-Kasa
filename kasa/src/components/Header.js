@@ -1,8 +1,10 @@
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import logo from '../assets/logo.svg';
 import '../style/Header.css';
 
 export default function Header() {
+    const location = useLocation();
+
     return (
         <header className="header">
             <Link to="/">
@@ -17,5 +19,5 @@ export default function Header() {
                 </Link>
             </nav>
         </header>
-    );
+    )
 }

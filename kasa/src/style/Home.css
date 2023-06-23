@@ -1,5 +1,19 @@
-.banner-title{
-    color: #FFFFFF;
+.banner-title {
     font-size: 48px;
     font-weight: 500;
+    color: white;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 3rem;
+    margin-bottom: 45px;
+    background-color: white;
+}
+.gallery a {
+    width: 0;
 }

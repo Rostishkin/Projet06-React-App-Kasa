@@ -1,5 +1,5 @@
 .footer{
-
+    margin-top: 45px;
     background-color: #000000;
     height: 210px;
 }
@@ -8,4 +8,7 @@
     font-size: 24px;
     color: #FFFFFF;
     font-weight: 400;
+}
+.logo-footer{
+    margin-top: 65px;
 }

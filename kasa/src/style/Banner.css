@@ -1,0 +1,28 @@
+.banner-img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../assets/home-banner.png);
+    height: 220px;
+    border-radius: 25px;
+    z-index: 0;
+}
+
+.banner-img .banner-overlay{
+    position: absolute;
+    border-radius: 25px;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0, 0, 0, 0.3) ;
+}
+
+.banner-img > * {
+    position: relative;
+    z-index: 2;
+}

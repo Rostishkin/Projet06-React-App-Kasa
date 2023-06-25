@@ -2,7 +2,7 @@
 import {Routes, Route} from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import NotFoundEror from "../pages/NotFoundEror";
+import NotFoundEror from "../pages/ErrorPage";
 import Logements from "../pages/Logements";
 
 export default function Router() {

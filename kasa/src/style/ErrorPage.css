@@ -1,0 +1,17 @@
+.error {
+    font-size: 250px;
+    font-weight: 700;
+    color: #FF6060;
+}
+
+.error-message{
+    font-size: 36px;
+    font-weight: 500;
+    color: #FF6060;
+}
+
+.comeback-message{
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+}

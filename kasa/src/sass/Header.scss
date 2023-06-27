@@ -1,21 +1,22 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    margin-bottom: 50px;
-}
-.navigation-link{
-    font-size: 30px;
-    font-weight: 500;
-    text-decoration: none;
-    color:#FF6060;
-    margin-left: 50px;
+@import './variables';
+@import './mixins';
+@import './placeholders';
+
+header {
+    @include flex (row, space-between, center);
 }
 
-.navigation-link--active {
-    text-decoration: underline;
+.navigation-link{
+    @include font-properties (24px, 500 $main-color);
+    text-decoration: none;
+    margin-left: 50px;
+
+    &--active{
+        text-decoration: underline;
+    }
 }
+
+/*Mediaqueries*/
 
 @media screen and (max-width: 576px) {
     .header-logo {
@@ -27,3 +28,4 @@
         text-transform: uppercase;
     }
 }
+    

@@ -10,7 +10,7 @@
     z-index: 0;
 }
 
-.banner-img .banner-overlay{
+.banner-img--overlay{
     position: absolute;
     border-radius: 25px;
     z-index: 0;
@@ -21,7 +21,32 @@
     background-color:rgba(0, 0, 0, 0.3) ;
 }
 
-.banner-img > * {
+.break-line {
+    display: none;
+  }
+
+.banner-title {
+    font-size: 48px;
+    font-weight: 500;
+    color: #FFF;
     position: relative;
     z-index: 2;
-}
+  }
+
+  @media screen and (max-width: 576px) {
+    .banner-image {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      padding-left: 16px;
+      height: 110px;
+    }
+    .banner-title {
+      font-size: 24px;
+      text-align: left;
+    }
+    .break-line {
+      display: initial;
+    }
+  }

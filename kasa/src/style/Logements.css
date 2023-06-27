@@ -75,14 +75,13 @@
 .collapse-body-logement{
     font-size: 18px;
 }
-.collapse-logement{
-    width: 100%;
+.collapse-container-logement{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-.collapse-container-logement {
+.collapse.collapse-logement {
     width: 45%;
 }
 .collapse-nom-logement{

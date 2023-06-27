@@ -5,9 +5,9 @@ export default function Thumb ({logements}) {
 
     return (
         <div className='card' key={id}>
-            <div className='card-overlay'></div>
-            <img className='image-cover' src={cover} alt={title}></img>
-            <h2 className='titre-logement'>{title}</h2>
+            <div className='card--overlay'></div>
+            <img className='card--cover' src={cover} alt={title}></img>
+            <h2 className='card--title'>{title}</h2>
         </div>
     );
 }

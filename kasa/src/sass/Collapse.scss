@@ -1,11 +1,17 @@
+@import './variables';
+@import './mixins';
+@import './placeholders';
+
 .collapse-container{
     display: flex;
     justify-content: center;
 }
+
 .collapse{
-    width: 85%;
-    margin-bottom: 45px;
+    width: 80%;
+    margin-bottom: 52px;
 }
+
 .collapse-header{
     cursor: pointer;
     width: 100%;
@@ -13,25 +19,26 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #FF6060;
     border: none;
     padding: 10px 20px;
     margin-top: 30px;
-
 }
+
 .collapse-title{
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     color: white;
 }
+
 .collapse-icon{
     font-size: 24px;
-    color: white;
+    color:white;
 }
 .collapse-body{
     background-color: #F7F7F7;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px;
     text-align: left;
     color: #FF6060;

@@ -12,7 +12,8 @@ export default function Collapse({ title, text }) {
     };
 
     return (
-        <div className='collapse'>
+        <div className='collapse-container'>
+            <div className='collapse'>
             <button className='collapse-header' onClick={toggleCollapse}>
                 <h3 className='collapse-title'>{title}</h3>
                 <FontAwesomeIcon
@@ -25,6 +26,7 @@ export default function Collapse({ title, text }) {
                 <p>{text}</p>
                 </div>
             )}
+            </div>
         </div>
     );
 }

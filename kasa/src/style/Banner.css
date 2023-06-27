@@ -5,8 +5,7 @@
     align-items: center;
     background-size: cover;
     background-position: center center;
-    background-image: url(../assets/home-banner.png);
-    height: 220px;
+    height: 265px;
     border-radius: 25px;
     z-index: 0;
 }

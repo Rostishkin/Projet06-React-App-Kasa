@@ -10,8 +10,8 @@ export default function Router() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/a-propos-de-nous" element={<About/>} />
-            <Route path="/offres-logement" element={<Logements/>} />
             <Route path="/*" element={<NotFoundEror/>} />
+            <Route exact path='/logements/:id' element={<Logements/>} />
         </Routes>
     )
 }

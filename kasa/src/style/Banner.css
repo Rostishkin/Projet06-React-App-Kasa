@@ -21,9 +21,6 @@
     background-color:rgba(0, 0, 0, 0.3) ;
 }
 
-.break-line {
-    display: none;
-  }
 
 .banner-title {
     font-size: 48px;
@@ -45,8 +42,5 @@
     .banner-title {
       font-size: 24px;
       text-align: left;
-    }
-    .break-line {
-      display: initial;
     }
   }

@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom'; //useParams hook qui permet d'ajouter un router et controler la navigation d'utilisateur dans l'appli
+import '../style/Logements.css'
+import { useParams, Navigate} from 'react-router-dom'; //useParams hook qui permet d'ajouter un router et controler la navigation d'utilisateur dans l'appli
 import logementsData from '../data/logements.json'; // datas logement
 import Collapse from '../components/Collapse'; //collapse 
 import Slideshow from '../components/Slideshow'; //slideshow
@@ -9,19 +10,27 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function Logements() {
     const {id} = useParams();
+
     const logements = logementsData.find ((item) => item.id === id);
+
+    if (!logements) {
+        return <Navigate to='/*'></Navigate>
+    }
+
     const {title, pictures, description, host, rating, location, equipments, tags} = logements;
     
-    //equimenets
+    //equiments
     const listeEquipements = () => {
         return (
             <ul className='liste-equipements'>
                 {equipments.map((equipment) => (
-                    <li className='equipement' key={equipment}>{equipment}</li>
+                    <li className='equipement' 
+                    key={equipment} > {equipment}</li>
                 ))}
             </ul>
         );
     };
+
     //ajout de rating
     const ratingStars = () => {
         const stars = [];
@@ -33,31 +42,33 @@ export default function Logements() {
             );
         };
     return stars;
-    }
+    };
 
     //slideshow
     return (
     <main>
         <Slideshow images={pictures} />
-        <div className='info-logement'>
+        <div className='logement-info'>
             <div className='text-logement'>
-                <h1 className='nom-logement'>{title}</h1>
-                <h2 className='emplacement-logement'>{location}</h2>
-                <ul className='liste-tag-logement'>
+                <h1 className='logement-info--nom font'>{title}</h1>
+                <h2 className='logement-info--emplacement font'>{location}</h2>
+                <ul className='logement--liste-tag'>
                     {tags.map ((tag) => (
-                        <li className='tag-logement'key={tag}>{tag}</li>
+                        <li className='logement--tag'key={tag}>{tag}</li>
                     ))}
                 </ul>
             </div>
-            <div>
-                <figure className='info-hote'>
-                    <img className='photo-hote' src={host.picture} alt={host.name}></img>
-                    <figcaption className='nom-hote'>{host.name}</figcaption>
+            <div className='logement-info--hote'>
+                <figure className='logement-info--hote-identity'>
+                    <img className='logement-info--photo-hote' src={host.picture} alt={host.name}></img>
+                    <figcaption className='logement-info--nom-hote font'>{host.name}</figcaption>
                 </figure>
-                <div className='rating-logement'>{ratingStars()}</div>
+                <div className='rating-logement'>
+                    {ratingStars()}
+                </div>
             </div>
         </div>
-        <div className='collapse-container-logement'>
+        <div className='collapsess-logement'>
             <Collapse title='Description' text={description} customClasses='collapse-logement' />
             <Collapse title='Équipements' text={listeEquipements()} customClasses='collapse-logement' />
         </div>

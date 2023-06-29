@@ -6,20 +6,19 @@
     background-size: cover;
     background-position: center center;
     height: 265px;
-    border-radius: 25px;
+    border-radius: 15px;
     z-index: 0;
-    width: 100%;
 }
 
 .banner-img--overlay{
     position: absolute;
-    border-radius: 25px;
+    border-radius: 15px;
     z-index: 0;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:rgba(0, 0, 0, 0.3) ;
+    background-color:rgba(0, 0, 0, 0.3);
 }
 
 
@@ -32,13 +31,13 @@
   }
 
   @media screen and (max-width: 576px) {
-    .banner-image {
+    .banner-img {
       display: flex;
       flex-direction: row;
       justify-content: left;
       align-items: center;
       padding-left: 16px;
-      height: 110px;
+      height: 112px;
     }
     .banner-title {
       font-size: 24px;

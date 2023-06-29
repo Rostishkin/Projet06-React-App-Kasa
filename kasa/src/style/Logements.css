@@ -1,48 +1,6 @@
-@import './variables';
-@import './mixins';
-@import './placeholders';
-
-
-/*Logements*/
-.info-logement {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 25px 0;
-}
-
-.nom-logement{
-    font-size: 36px;
-    text-align: left;
-    margin-bottom: 10px;
-
-}
-.emplacement-logement{
-    font-size: 20px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.liste-tag-logement{
-    display: flex;
-    padding: 0;
-    margin: 0;
-}
-
-.tag-logement {
-    font-size: 14px;
-    padding: 5px 40px;
-    margin: 0;
-    margin-right: 10px;
-    color: white;
-    background: #FF6060;
-    border-radius: 10px;
-    list-style: none;
-}
-
 /*Stars Rating*/
 .rating-logement{
-    font-size: 24px;
+    font-size: 22px;
     margin-top: 26px;
 }
 
@@ -56,6 +14,48 @@
     margin-left: 15px;
 }
 
+/*Logements*/
+.logement-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.logement-info--nom{
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 10px;
+
+}
+.logement-info--emplacement{
+    font-size: 18px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.logement--liste-tag{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: left;
+    padding: 0;
+    margin: 0;
+}
+
+.logement--tag {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 25px;
+    margin: 0;
+    margin-right: 10px;
+    color: white;
+    background: #FF6060;
+    border-radius: 10px;
+    list-style: none;
+}
+
 /*Equipements*/
 .liste-equipements{
     margin: 0;
@@ -67,25 +67,27 @@
     padding: 0;
 }
 /*Hotes*/
-.container-hote{
+.logement-info--hote{
     display: flex;
     flex-direction: column;
-    align-items: end;
+    justify-content: center;
+    align-items: flex-end;
 }
-.nom-hote{
+.logement-info--nom-hote{
     font-size: 18px;
     text-align: right;
     margin-right: 10px;
 }
-.photo-hote{
-    height: 64px;
+.logement-info--photo-hote{
+    height: 64x;
     width: 64px;
     border-radius: 100px;
 }
-.info-hote{
+.logement-info--hote-identity{
     display:flex;
     flex-direction: row-reverse;
-    align-items: center;
+    justify-content: center;
+    align-items:center;
 }
 
 /*Autres*/
@@ -93,19 +95,93 @@
     font-weight: 500;
     color: #ff6060;
 }
-.collapse-body-logement.collapse-logement{
-    font-size: 18px;
-}
-.collapse-container-logement{
+ /*Collapse*/
+ .collapsess-logement{ /*housing collapses*/
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+.collapse.collapse-logement{ 
+    width: 48%;
 }
 
-.collapse.collapse-logement {
+.collapse-container.collapse-logement{
     width: 100%;
+    margin-bottom: 0;
 }
-.collapse-nom-logement.collapse-logement{
-    font-weight: 500;
+
+.collapse-title.collapse-logement {
     font-size: 18px;
+}
+
+.collapse-body.collapsess-logement{
+    font-size: 18px;
+}
+
+@media screen and (max-width: 576px) {
+    .star-active, .star-inactive{
+        margin-left: 0;
+        margin-right: 8px;
+    }
+    .logement-info {
+        margin-bottom: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .logement-info--nom{
+        font-size: 18px;
+    }
+    .logement-info--emplacement{
+        font-size: 14px;
+    }
+    .logement--liste-tag{
+        font-size: 10px;
+        border-radius: 10px;
+    }
+    .logement--tag{
+        font-size: 10px;
+    }
+
+    .logement-info--hote{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .logement-info--nom-hote{
+        font-size: 15px;
+        width: min-content;
+    }
+    .logement-info--photo-hote{
+        width: 32px;
+        height: 32px;
+    }
+
+    .rating-logement {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .collapsess-logement{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+    .collapse.collapse-logement{
+        width: 100%;
+    }
+    .collapse-title.collapse-logement{
+        font-size: 14px;
+    }
+    .collapse-body.collapse-logement{
+        font-size: 12px;
+    }
+
 }

@@ -1,18 +1,25 @@
-.banner-title {
-    font-size: 48px;
-    font-weight: 500;
-    color: white;
-}
 
 .gallery{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
-    border-radius: 15px;
-    padding: 3rem;
-    margin-bottom: 45px;
-    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+    align-items: normal;
+    flex-wrap: wrap;
+    gap: 50px 60px;
+    padding: 50px;
+    margin-bottom: 40px;
+    border-radius: 25px;
     background-color: #f6f6f6;
+}
+
+@media screen and (max-width:576px) {
+    .gallery{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        gap: 20px;
+    }
 }
 

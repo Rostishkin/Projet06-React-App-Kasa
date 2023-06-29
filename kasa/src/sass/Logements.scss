@@ -4,20 +4,20 @@
 
 
 /*Logements*/
-.info-logement {
+.logement-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 25px 0;
 }
 
-.nom-logement{
+.ogement-nom{
     font-size: 36px;
     text-align: left;
     margin-bottom: 10px;
 
 }
-.emplacement-logement{
+.logement-emplacement{
     font-size: 20px;
     text-align: left;
     margin-bottom: 20px;

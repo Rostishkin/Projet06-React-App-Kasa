@@ -2,9 +2,9 @@ import '../style/Logements.css'
 import { useParams, Navigate} from 'react-router-dom'; //useParams hook qui permet d'ajouter un router et controler la navigation d'utilisateur dans l'appli
 import logementsData from '../data/logements.json'; // datas logement
 import Collapse from '../components/Collapse'; //collapse 
-import Slideshow from '../components/Slideshow'; //slideshow
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import Slideshow from '../components/Slideshow';
 
 //fonction Logements
 

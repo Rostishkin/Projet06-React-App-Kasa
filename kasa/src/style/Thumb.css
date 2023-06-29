@@ -1,6 +1,6 @@
 /*card style*/
 .card {
-    width: 25vw;
+    width: 24vw;
     height: 100%;
     position: relative;
     aspect-ratio: 1/1;
@@ -41,7 +41,6 @@
     .card{
         width: 100%;
         aspect-ratio: 3/2;
-        margin-top: 25px;
         max-height: 335px;
     }
     .card--overlay{

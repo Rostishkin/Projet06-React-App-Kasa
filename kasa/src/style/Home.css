@@ -2,14 +2,13 @@
 .gallery{
     display: flex;
     flex-direction: row;
-    justify-content: baseline;
-    align-items: normal;
+    justify-content:flex-start;      
     flex-wrap: wrap;
     gap: 50px 60px;
+    margin-top:  50px;
     padding: 50px;
-    margin-bottom: 40px;
-    border-radius: 25px;
     background-color: #f6f6f6;
+    border-radius: 15px;
 }
 
 @media screen and (max-width:576px) {
@@ -18,8 +17,9 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 0;
-        gap: 20px;
+        padding: 0 0 ;
+        background-color: white;
+        gap: 25px;
     }
 }
 

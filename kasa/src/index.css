@@ -26,13 +26,9 @@
 
   body{
     font-family:'Montserrat', sans-serif;
-    -webkit-font-smoothing: antialiased;  /* Amelioration nettete des textes pour Chrome et Safari*/
-    -moz-osx-font-smoothing: grayscale;   /* Amelioration nettete des textes pour Firefox sur MacOS*/
   }
   header, main{
     margin: 2vw 2vw 0 2vw;
-    max-width: 1240px;
-
   }
 
   @media screen and (max-width:576px) {

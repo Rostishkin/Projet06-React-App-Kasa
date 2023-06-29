@@ -41,7 +41,7 @@
 
 .slidehshow-navigation{
     position: absolute;
-    color: white;
+    color: black;
     top: 50%;
     font-size: 75px;
     transform: translateY(-50%);

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import '../style/Slideshow.css';
 
 export default function Slideshow({ images }) {
@@ -18,10 +18,12 @@ export default function Slideshow({ images }) {
 
     return (
         <div className="slideshow">
+
             {allSlides > 1 && (
-                <FontAwesomeIcon icon={faChevronRight}
-                 onClick={NextSlide} 
-                 className="slideshow--next-slide slideshow-navigation" />
+                <FontAwesomeIcon 
+                icon={faChevronRight}
+                onClick={NextSlide} 
+                className="slideshow--next-slide slideshow-navigation" />
             )}
 
             <div className="slideshow-img">

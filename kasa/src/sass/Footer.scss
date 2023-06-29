@@ -19,7 +19,14 @@
 }
 
 @media screen and (max-width: 576px) {
+    .footer{
+        margin-top: 25px;
+    }
+    .copyright{
+        font-size: 12px;
+        width: 124px;
+    }
     .logo-footer{
-        margin-top: 66px;
+        margin-top: 10px;
     }
 }

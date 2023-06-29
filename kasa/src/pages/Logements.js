@@ -12,7 +12,7 @@ export default function Logements() {
     const logements = logementsData.find ((item) => item.id === id);
     const {title, pictures, description, host, rating, location, equipments, tags} = logements;
     
-    
+    //equimenets
     const listeEquipements = () => {
         return (
             <ul className='liste-equipements'>
@@ -22,7 +22,7 @@ export default function Logements() {
             </ul>
         );
     };
-
+    //ajout de rating
     const ratingStars = () => {
         const stars = [];
 
@@ -35,7 +35,7 @@ export default function Logements() {
     return stars;
     }
 
-
+    //slideshow
     return (
     <main>
         <Slideshow images={pictures} />

@@ -15,7 +15,7 @@ export default function Header() {
                     Accueil
                 </Link>
                 <Link to="/a-propos-de-nous" className={`navigation-link ${location.pathname === '/a-propos-de-nous' ? 'navigation-link--active': ''}`}>
-                    A Propos
+                    À Propos
                 </Link>
             </nav>
         </header>

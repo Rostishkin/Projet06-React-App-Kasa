@@ -4,7 +4,7 @@
 
 .banner-img{
 
-    @include flex(row,center,center);
+    @include flex (row, center, center);
     position: relative;
     height: 224px;
     background-position: center center;

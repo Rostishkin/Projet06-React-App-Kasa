@@ -8,6 +8,7 @@
     height: 265px;
     border-radius: 25px;
     z-index: 0;
+    width: 100%;
 }
 
 .banner-img--overlay{

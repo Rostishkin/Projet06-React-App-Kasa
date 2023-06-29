@@ -1,14 +1,15 @@
-.collapse-container{
+.collapse{
     display: flex;
     justify-content: center;
 }
-.collapse{
+.collapse-container{
     width: 85%;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 .collapse-header{
     cursor: pointer;
     width: 100%;
+    height: 56px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -37,4 +38,26 @@
     color: #FF6060;
     font-size: 24px;
     font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+    .collapse-container{
+        width: 100%;
+        height: 40px;
+    }
+    .collapse-header{
+        padding: 12px;
+        height: 40px;
+    }
+    .collapse-title{
+        font-size: 13px;
+        font-weight: 500;
+
+    }
+    .collapse-icon{
+        font-size: 16px;
+    }
+    .collapse-body{
+        font-size: 12px;
+    }
 }

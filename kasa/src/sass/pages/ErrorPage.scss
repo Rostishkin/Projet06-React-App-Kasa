@@ -1,0 +1,48 @@
+@import './variables';
+@import './mixins';
+@import './placeholders';
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 122px;
+  
+    &-titre {
+      font-size: 275px;
+      font-weight: 700;
+      color: #FF6060;
+    }
+  
+    &-message {
+      font-size: 36px;
+      font-weight: 500;
+      color: #FF6060;
+    }
+  
+    &-comeback-message {
+      font-size: 18px;
+      font-weight: 500;
+      color: #FF6060;
+      text-decoration: underline;
+    }
+  
+    @media screen and (max-width: 576px) {
+      gap: 112px;
+  
+      &-titre {
+        font-size: 120px;
+        margin-top: 112px;
+      }
+  
+      &-message {
+        font-size: 18px;
+        width: 260px;
+      }
+  
+      &-comeback-message {
+        font-size: 14px;
+      }
+    }
+  }

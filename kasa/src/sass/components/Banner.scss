@@ -1,0 +1,42 @@
+@import './variables';
+@import './mixins';
+@import './placeholders';
+
+.banner-img {
+    @include flex(row, left, center);
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    height: 265px;
+    border-radius: $radius-large;
+    z-index: 0;
+  
+    &--overlay {
+      position: absolute;
+      border-radius: $radius-large;
+      z-index: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  
+    .banner-title {
+      @include font-properties(48px, 500, #FFF);
+      position: relative;
+      z-index: 2;
+    }
+  
+    @media screen and (max-width: 576px) {
+      height: 112px;
+      padding-left: 16px;
+  
+      .banner-title {
+        @include font-properties(24px, normal, #FFF);
+        text-align: left;
+      }
+    }
+  }

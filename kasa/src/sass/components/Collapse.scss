@@ -1,0 +1,78 @@
+@import './variables';
+@import './mixins';
+@import './placeholders';
+
+.collapse {
+    display: flex;
+    justify-content: center;
+  
+    &-container {
+      width: 85%;
+      margin-bottom: 20px;
+    }
+  
+    &-header {
+      cursor: pointer;
+      width: 100%;
+      height: 56px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      background-color: #FF6060;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 30px;
+  
+      .collapse-title {
+        font-size: 24px;
+        font-weight: 500;
+        color: white;
+      }
+  
+      .collapse-icon {
+        font-size: 24px;
+        color: white;
+        transition: transform 0.3s ease;
+      }
+    }
+  
+    &-body {
+      background-color: #F7F7F7;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      color: #FF6060;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  
+    @media screen and (max-width: 576px) {
+      justify-content: center;
+      display: block;
+  
+      &-container {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+  
+      &-header {
+        padding: 12px;
+        height: 40px;
+  
+        .collapse-title {
+          font-size: 13px;
+          font-weight: 500;
+        }
+  
+        .collapse-icon {
+          font-size: 16px;
+        }
+      }
+  
+      &-body {
+        font-size: 12px;
+      }
+    }
+  }

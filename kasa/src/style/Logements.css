@@ -154,12 +154,12 @@
         margin-top: 10px;
     }
     .logement-info--nom-hote{
-        font-size: 15px;
+        font-size: 14px;
         width: min-content;
     }
     .logement-info--photo-hote{
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
     }
 
     .rating-logement {

@@ -2,6 +2,7 @@ import './App.css';
 import Router from "./routes/Router";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTopButton from './components/ScrollToTop';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Router />
       <Footer />
+      <ScrollToTopButton/>
     </div>
   );
 }

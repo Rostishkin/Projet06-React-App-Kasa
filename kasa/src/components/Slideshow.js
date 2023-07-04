@@ -3,19 +3,30 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
+//fonction slideshow avec tableau d'images en parametre
 export default function Slideshow({ images }) {
 
+    //currentSlide = photo actuelle
+    //allSlides = nombre total des photos
     const [currentSlide, setCurrentSlide] = useState(0);
     const allSlides = images.length;
 
+    //fonction next 
+    // % pour revenir à la premiere photo après la derniere
     const NextSlide = () => {
         setCurrentSlide((previousSlide) => (previousSlide + 1) % allSlides);
     };
 
+     //precedent slide
+     // % aller à la dernière photo après la premiere
     const PreviousSlide = () => {
         setCurrentSlide((previousSlide) => (previousSlide - 1 + allSlides) % allSlides);
     };
 
+    //sortie
+    //allSlides > 1 == affichage
+    //si plus d'une image le nombre sur le total s'affiche / sinon rien 
+    // la meme chose pour les chevrons
     return (
         <div className="slideshow">
             {allSlides > 1 && (
@@ -29,7 +40,7 @@ export default function Slideshow({ images }) {
                     className="slideshow-active-img"
                 />
             </div>
-            
+
             {allSlides > 1 && (
                 <div className="slideshow-number">
                     {`${currentSlide + 1}/${allSlides}`}

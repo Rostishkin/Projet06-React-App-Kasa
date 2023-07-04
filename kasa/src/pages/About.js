@@ -1,14 +1,14 @@
-import Banner from  '../components/Banner';
-import aboutBanner from '../assets/about-banner.png';
-import Collapse from '../components/Collapse';
+import Banner from  '../components/Banner'; //banner
+import aboutBanner from '../assets/about-banner.png'; //image banner about
+import Collapse from '../components/Collapse'; //collapse
 
+//fonction about
 export default function About() {
     return (
         <main>
             <Banner 
                 imageUrl={aboutBanner}>
             </Banner>
-            
             <Collapse title='Fiabilité' text="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
             <Collapse title='Respect' text="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
             <Collapse title='Service' text="Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question." />

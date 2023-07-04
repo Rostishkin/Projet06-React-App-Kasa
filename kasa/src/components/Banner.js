@@ -1,10 +1,9 @@
-import '../style/Banner.css';
+import '../sass/components/Banner.scss';
  
-// 
+// la fonction Banner
 export default function Banner ({children, imageUrl}) {
     
-    //const style de banner
-
+    //const bannerStyle qui contien l'image
     const bannerStyle = {
         backgroundImage:`url(${imageUrl})`,
     };

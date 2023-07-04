@@ -1,6 +1,8 @@
 import {Link} from 'react-router-dom';
 import '../sass/pages/ErrorPage.scss';
 
+//ErrorPage
+//link to '/' retour page home
 export default function ErrorPage () {
     return (
     <main>

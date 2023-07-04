@@ -1,12 +1,12 @@
-import '../sass/pages/Home.scss';
+import '../sass/pages/Home.scss'; //scss
 import { Link } from "react-router-dom";
-import Banner from "../components/Banner";
-import homeBanner from "../assets/home-banner.png"
-import logementsData from '../data/logements.json'
-import Thumb from "../components/Thumb";
+import Banner from "../components/Banner"; //banner 
+import homeBanner from "../assets/home-banner.png"// home banner img
+import logementsData from '../data/logements.json' //datas
+import Thumb from "../components/Thumb"; //thumb
 
 
-
+//fonction Home
 export default function Home() {
     return (
         <main>

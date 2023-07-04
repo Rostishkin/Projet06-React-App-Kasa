@@ -1,7 +1,10 @@
+//link = creation de liens internes dans l'app
 import {Link} from 'react-router-dom';
+//logo
 import logo from "../assets/logo-footer.svg"
 import '../sass/components/Footer.scss'
 
+//fonction footer
 export default function Footer() {
     return (
         <footer className='footer'>

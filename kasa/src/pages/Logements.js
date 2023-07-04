@@ -4,19 +4,20 @@ import logementsData from '../data/logements.json'; // datas logement
 import Collapse from '../components/Collapse'; //collapse 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import Slideshow from '../components/Slideshow';
+import Slideshow from '../components/Slideshow'; // slideshow
 
 //fonction Logements
-
 export default function Logements() {
+    //useParams pour extraire id de l'URL afin de trouver le logement correspondant dans les datas
     const {id} = useParams();
-
+    //Vérif si logement existe avec "find" sur les données des logements
     const logements = logementsData.find ((item) => item.id === id);
-
+    //sinon retourner avec Navigate au '/*' donc pâge 404
     if (!logements) {
         return <Navigate to='/*'></Navigate>
     }
 
+    // destructuration pour usage plus facile
     const {title, pictures, description, host, rating, location, equipments, tags} = logements;
     
     //equiments

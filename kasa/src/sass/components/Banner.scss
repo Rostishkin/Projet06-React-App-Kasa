@@ -33,10 +33,11 @@
     @media screen and (max-width: 576px) {
       height: 112px;
       padding-left: 16px;
+      @include flex(row, left, center);
   
       .banner-title {
-        @include font-properties(24px, normal, #FFF);
         text-align: left;
+        @include font-properties(22px, normal, #FFF);
       }
     }
   }

@@ -11,7 +11,7 @@ export default function Collapse({ title, text, customClasses}) {
 
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
-        setIconRotation(iconRotation === 0 ? 180 : 0);
+        setIconRotation(iconRotation === 0 ? -180 : 0);
     }
 
     return (

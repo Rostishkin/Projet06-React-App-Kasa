@@ -1,5 +1,5 @@
+import '../sass/pages/Home.scss';
 import { Link } from "react-router-dom";
-import '../style/Home.css';
 import Banner from "../components/Banner";
 import homeBanner from "../assets/home-banner.png"
 import logementsData from '../data/logements.json'

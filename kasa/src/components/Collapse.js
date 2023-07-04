@@ -1,6 +1,6 @@
 import { useState } from 'react'; //Hook d'etat
 
-import '../style/Collapse.css'; // import de css pour collapse
+import '../sass/components/Collapse.scss'; // import de css pour collapse
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; //import de fontawesome
 import { faChevronUp} from '@fortawesome/free-solid-svg-icons'; //import de chevron
 

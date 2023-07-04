@@ -1,4 +1,4 @@
-import '../style/Logements.css'
+import '../sass/pages/Logements.scss';
 import { useParams, Navigate} from 'react-router-dom'; //useParams hook qui permet d'ajouter un router et controler la navigation d'utilisateur dans l'appli
 import logementsData from '../data/logements.json'; // datas logement
 import Collapse from '../components/Collapse'; //collapse 
@@ -49,24 +49,26 @@ export default function Logements() {
     <main>
         <Slideshow images={pictures} />
         <div className='logement-info'>
-            <div className='text-logement'>
+            <div className='logement-info-text-logement'>
                 <h1 className='logement-info--nom font'>{title}</h1>
                 <h2 className='logement-info--emplacement font'>{location}</h2>
-                <ul className='logement--liste-tag'>
-                    {tags.map ((tag) => (
-                        <li className='logement--tag'key={tag}>{tag}</li>
+                <ul className='logement-info--liste'>
+                    {tags.map((tag) => (
+                    <li className='logement-info--liste-tag' key={tag}>{tag}</li>
                     ))}
                 </ul>
-            </div>
-            <div className='logement-info--hote'>
+                </div>
+                <div className='logement-info--hote'>
                 <figure className='logement-info--hote-identity'>
-                    <img className='logement-info--photo-hote' src={host.picture} alt={host.name}></img>
-                    <figcaption className='logement-info--nom-hote font'>{host.name}</figcaption>
+                <img className='logement-info--hote--photo-hote' src={host.picture} alt={host.name}></img>
+
+                    <figcaption className='logement-info--hote--nom-hote font'>{host.name}</figcaption>
                 </figure>
                 <div className='rating-logement'>
                     {ratingStars()}
                 </div>
             </div>
+
         </div>
         <div className='collapsess-logement'>
             <Collapse title='Description' text={description} customClasses='collapse-logement' />

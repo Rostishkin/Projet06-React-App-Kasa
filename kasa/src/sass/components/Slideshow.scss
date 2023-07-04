@@ -1,75 +1,71 @@
-@import './variables';
-@import './mixins';
-@import './placeholders';
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/placeholders';
 
 .slideshow {
-    position: relative;
+  position: relative;
+  width: 100%;
+  height: 415px;
+  border-radius: 25px;
+  display: flex;
+  margin-top: 20px;
+
+  &-active-img {
     width: 100%;
-    height: 415px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
     border-radius: 25px;
-    display: flex;
-    margin-top: 20px;
-  
-    &-active-img {
-      width: 100%;
-      height: 100%;
-      -o-object-fit: cover;
-      object-fit: cover;
-      border-radius: 25px;
-    }
-  
-    &-images {
-      width: 100%;
-      height: 100%;
-    }
-  
-    &-number {
-      position: absolute;
-      color: #ffffff;
-      font-weight: 500;
-      font-size: 18px;
-      bottom: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    &--next-slide {
-      right: 25px;
-    }
-  
-    &--previous-slide {
-      left: 25px;
-    }
-  
-    &-navigation {
-      cursor: pointer;
-      position: absolute;
-      color: white;
-      font-size: 80px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
-  
+
+  &-images {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-number {
+    position: absolute;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--next-slide {
+    right: 25px;
+  }
+
+  &--previous-slide {
+    left: 25px;
+  }
+
+  &-navigation {
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   @media screen and (max-width: 576px) {
-    .slideshow {
-      height: 250px;
-    }
-  
+
     &--next-slide {
       right: 5px;
     }
-  
+
     &--previous-slide {
       left: 5px;
     }
-  
-    .slideshow-navigation {
+
+    &-navigation {
       font-size: 22px;
     }
-  
-    .slideshow-number {
+
+    &-number {
       display: none;
     }
   }
-  
+}

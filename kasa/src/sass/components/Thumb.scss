@@ -1,49 +1,50 @@
-@import './variables';
-@import './mixins';
-@import './placeholders';
-
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/placeholders';
 .card {
-    width: 24vw;
+  width: 24vw;
+  height: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+
+  &--overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    position: relative;
-    aspect-ratio: 1/1;
-  
-    &--overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 10px;
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    }
-  
-    &--cover {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-  
-    &--title {
-      position: absolute;
-      bottom: 0;
-      text-align: left;
-      font-weight: 500;
-      font-size: 18px;
-      color: white;
-      margin: 0 0.5rem 1rem 1rem;
-    }
+    border-radius: 10px;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
   }
-  
+
+  &--cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &--title {
+    position: absolute;
+    bottom: 0;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    margin: 0 0.5rem 1rem 1rem;
+  }
+
   @media screen and (max-width: 576px) {
-    .card {
-      width: 100%;
-      aspect-ratio: 3/2;
-      max-height: 335px;
-  
-      &--overlay {
-        bottom: 5px;
-      }
+    width: 100%;
+    aspect-ratio: 3/2;
+    max-height: 335px;
+
+    &--overlay {
+      bottom: 5px;
     }
   }
+}

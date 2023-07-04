@@ -1,40 +1,26 @@
-/* Variables */
-$color-primary: #FF6060;
-$color-secondary: #F6F6F6;
-$color-black: #000000;
-$color-white: #FFFFFF;
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/placeholders';
 
-/* Mixins */
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Styles */
 .gallery {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 60px 60px;
-    margin-top: 50px;
+    gap: 50px 50px;
     padding: 50px;
-    background-color: $color-secondary;
-    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    background-color: #F6F6F6;
+    border-radius: $radius-large;
+    
+}
 
-    @include media-screen(max-width: 990px) {
-        gap: 25px;
-        justify-content: space-between;
-    }
-
-    @include media-screen(max-width: 576px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 0;
-        background-color: $color-white;
-        gap: 25px;
+@media screen and (max-width: 596px) {
+    .gallery {
+        background: none;
+        padding: 0px;
+        margin-top: 15px;
+        gap: 20px;
+        @include flex(column, flex-start, center);
     }
 }

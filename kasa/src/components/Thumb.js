@@ -1,4 +1,4 @@
-import '../style/Thumb.css';
+import '../sass/components/Thumb.scss';
 
 export default function Thumb ({logements}) {
     const {id, title, cover} = logements;

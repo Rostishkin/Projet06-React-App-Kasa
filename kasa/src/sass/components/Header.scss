@@ -1,6 +1,6 @@
-@import './variables';
-@import './mixins';
-@import './placeholders';
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../utils/placeholders';
 
 .header {
     display: flex;

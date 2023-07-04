@@ -1,13 +1,12 @@
 import '../style/Banner.css';
-
-export default function Banner ({children, imageUrl, marginTop, marginBottom}) {
+ 
+// 
+export default function Banner ({children, imageUrl}) {
     
     //const style de banner
 
     const bannerStyle = {
         backgroundImage:`url(${imageUrl})`,
-        marginTop,
-        marginBottom,
     };
 
     // retourner div avec image stylisé et overlay
